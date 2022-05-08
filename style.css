@@ -1,0 +1,20 @@
+/* <- Start of a comment in CSS
+
+CSS has various rules. Rules are written in the format of:
+selector {
+    property: value
+} 
+    
+'*' stands for Universal Selector
+
+type selector or element selector will rule over all elements of the given element type eg: 
+div {
+  color: white;
+}
+
+You can govern a class with '.' before the class name eg:
+.class-name {
+  color: red;
+}
+
+CSS Comments ends with the symbol -> */

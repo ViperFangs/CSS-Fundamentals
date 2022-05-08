@@ -37,6 +37,25 @@ You can group selectors with ',' if they share some of the same elements eg:
     /* several unique declarations */
   }
 
+You can chain multiple classes together, eg:
+  .class-name1.class-name2{
+
+  }
+
+You can also chain an ID and class together
+  #ID-name.class-name{
+
+  }
+
+In general, you can’t chain more than one type selector since an element can’t
+be two different types at once. For example, chaining two type selectors like
+div and p would give us the selector divp, which wouldn’t work since the
+selector would try to find a literal <divp> element, which doesn’t exist.
+
+<HTML NOTES>
+
+You can add multiple classes to an element by using space, eg:
+  <div class="class-name1 class-name2 class-name3"></div>
 
 
 CSS Comments ends with the symbol -> */

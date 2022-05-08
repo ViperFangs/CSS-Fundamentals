@@ -1,40 +1,42 @@
 /* <- Start of a comment in CSS
 
 CSS has various rules. Rules are written in the format of:
-selector {
-    property: value
-} 
+  selector {
+      property: value
+  } 
     
 '*' stands for Universal Selector
 
 type selector or element selector will rule over all elements of the given element type eg: 
-div {
-  color: white;
-}
+  div {
+    color: white;
+  }
 
 You can govern a class with '.' before the class name eg:
-.class-name {
-  color: red;
-}
+  .class-name {
+    color: red;
+  }
 
 You can govern an ID with '#' before the ID name eg:
-#ID-name {
-  color: blue;
-}
+  #ID-name {
+    color: blue;
+  }
 
 You can group selectors with ',' if they share some of the same elements eg:
-.read,
-.unread {
-  color: white;
-  background-color: black;
-}
+  .read,
+  .unread {
+    color: white;
+    background-color: black;
+  }
 
-.read {
-  /* several unique declarations */
-}
+  .read {
+    /* several unique declarations */
+  }
 
-.unread {
-  /* several unique declarations */
-}
+  .unread {
+    /* several unique declarations */
+  }
+
+
 
 CSS Comments ends with the symbol -> */

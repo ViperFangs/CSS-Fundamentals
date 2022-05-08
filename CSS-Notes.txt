@@ -77,8 +77,24 @@ eg:
 In the above example, the first two elements with the contents class (B and C) would be selected, but that last element (D) won’t be.
 
 Frequently used CSS properties:
+
 1. color and background-color
+
 The color property sets an element’s text color, while background-color sets, well, the background color of an element.
+eg:
+  p {
+    /* hex example: */
+    color: #1100ff;
+    /* rgb example: */
+    color: rgb(100, 0, 127);
+    /* rgba: a stands for alpha(opacity) and has the range from 0 to 1 example: */
+    color: rgb(250, 45, 0, 0.6);
+    /* hsl example: */
+    color: hsl(15, 82%, 56%);
+    /* hsla example: */
+    color: hsl(250, 82%, 70%, 0.5);
+  }
+
 
 
 <HTML NOTES>

@@ -52,6 +52,35 @@ be two different types at once. For example, chaining two type selectors like
 div and p would give us the selector divp, which wouldn’t work since the
 selector would try to find a literal <divp> element, which doesn’t exist.
 
+Descendant combinator is represented in CSS by a single space between selectors.
+
+So something like .ancestor .child would select an element with the class child if it has an ancestor with the class ancestor.
+Another way to think of it is child will only be selected if it is nested inside of ancestor, no matter how deep.
+eg:
+  <!-- index.html -->
+
+  <div class="ancestor"> <!-- A -->
+    <div class="contents"> <!-- B -->
+      <div class="contents"> <!-- C -->
+      </div>
+    </div>
+  </div>
+
+  <div class="contents"></div> <!-- D -->
+
+  /* styles.css */
+
+  .ancestor .contents {
+    /* some declarations */
+  }
+
+In the above example, the first two elements with the contents class (B and C) would be selected, but that last element (D) won’t be.
+
+Frequently used CSS properties:
+1. color and background-color
+The color property sets an element’s text color, while background-color sets, well, the background color of an element.
+
+
 <HTML NOTES>
 
 You can add multiple classes to an element by using space, eg:

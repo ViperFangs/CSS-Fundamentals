@@ -117,6 +117,16 @@ e.g.
   Will align text horizontally within an element
   e.g. text-align: center
 
+3. Image Height and Width
+e.g. 
+  img {
+    height: auto; /* auto adjusts the size of the image without causing it to lose its proportions */
+    width: 500px;
+  }
+
+It's good practice to put an image's height and width property because if an image takes longer to load than the rest of the page contents, 
+the image won’t take up any space on the page at first, but will suddenly cause a drastic shift of the other page contents once it does load in.
+
 
 
 

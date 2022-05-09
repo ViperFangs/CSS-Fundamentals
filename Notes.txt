@@ -1,4 +1,4 @@
-/* <- Start of a comment in CSS
+ CSS Comments starts with '/*' and ends with '*/'
 
 CSS has various rules. Rules are written in the format of:
   selector {
@@ -7,22 +7,22 @@ CSS has various rules. Rules are written in the format of:
     
 '*' stands for Universal Selector
 
-type selector or element selector will rule over all elements of the given element type eg: 
+type selector or element selector will rule over all elements of the given element type e.g. 
   div {
     color: white;
   }
 
-You can govern a class with '.' before the class name eg:
+You can govern a class with '.' before the class name e.g.
   .class-name {
     color: red;
   }
 
-You can govern an ID with '#' before the ID name eg:
+You can govern an ID with '#' before the ID name e.g.
   #ID-name {
     color: blue;
   }
 
-You can group selectors with ',' if they share some of the same elements eg:
+You can group selectors with ',' if they share some of the same elements e.g.
   .read,
   .unread {
     color: white;
@@ -37,7 +37,7 @@ You can group selectors with ',' if they share some of the same elements eg:
     /* several unique declarations */
   }
 
-You can chain multiple classes together, eg:
+You can chain multiple classes together, e.g.
   .class-name1.class-name2{
 
   }
@@ -56,7 +56,7 @@ Descendant combinator is represented in CSS by a single space between selectors.
 
 So something like .ancestor .child would select an element with the class child if it has an ancestor with the class ancestor.
 Another way to think of it is child will only be selected if it is nested inside of ancestor, no matter how deep.
-eg:
+e.g.
   <!-- index.html -->
 
   <div class="ancestor"> <!-- A -->
@@ -81,7 +81,7 @@ Frequently used CSS properties:
 1. color and background-color
 
 The color property sets an element’s text color, while background-color sets, well, the background color of an element.
-eg:
+e.g.
   p {
     /* hex example: */
     color: #1100ff;
@@ -95,12 +95,31 @@ eg:
     color: hsl(250, 82%, 70%, 0.5);
   }
 
+2. Typography Basics and text-align
+
+  font-family
+  If a browser cannot find or does not support the first font in a list, it will use the next one, then the next one and so on
+  e.g. font-family: "Times New Roman", sans-serif;
+
+  font-size
+  e.g. font-size: 22px
+
+  font-weight
+  Affects the boldness of text, assuming the font supports the specified weight.
+  e.g. font-weight: bold 
+
+  or 
+
+  A number between 1 and 1000 
+  e.g. font-weight: 700
+
+  text-align
+  Will align text horizontally within an element
+  e.g. text-align: center
+
+
 
 
 <HTML NOTES>
 
-You can add multiple classes to an element by using space, eg:
-  <div class="class-name1 class-name2 class-name3"></div>
-
-
-CSS Comments ends with the symbol -> */
+You can add multiple classes to an element by using space, e.g. <div class="class-name1 class-name2 class-name3"></div>

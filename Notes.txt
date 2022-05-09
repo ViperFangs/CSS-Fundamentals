@@ -126,8 +126,60 @@ e.g.
 
 It's good practice to put an image's height and width property because if an image takes longer to load than the rest of the page contents, 
 the image won’t take up any space on the page at first, but will suddenly cause a drastic shift of the other page contents once it does load in.
+Explicitly stating a height and width prevents this from happening, as space will be “reserved” on the page and will just appear as a blank space until the image loads.
 
+Specificity
+A CSS declaration that is more specific will take precedence over less specific ones.
+1. ID selectors (most specific selector)
+2. Class selectors
+3. Type selectors (least specific)
 
+Inline styles(styles used inside html) are the most specific
+
+Specificity will only be taken into account when an element has multiple, conflicting declarations targeting it, sort of like a tie-breaker.
+
+Universal selector '*' which has no specificity value.
+
+Inheritance
+Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if we don’t explicitly write a rule for those descendants.
+Typography based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t.
+
+The exception to this is when directly targeting an element, as this always beats inheritance:
+e.g.
+  <!-- index.html -->
+  <div id="parent">
+    <div class="child"></div>
+  </div>
+
+  /* styles.css */
+  #parent {
+    color: red;
+  }
+
+  .child {
+    color: blue;
+  }
+
+Despite the parent element having a higher specificity with an ID, the child element would have the color: blue style applied since that declaration directly targets it, while color: red from the parent is only inherited.
+
+Rule Order: If 2 rules are in conflict of which property takes over. Whichever rule was the last defined is the winner.
+
+Adding CSS to HTML
+
+External CSS:
+We link it to HTML File with the <link> tag
+e.g.
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+The rel attribute is required, and it specifies the relationship between the HTML file and the linked file.
+
+Internal CSS (Don't use)
+Done with <style> element inside the head of the HTML file
+
+Inline CSS (Not recommended)
+Rules defined with a tag e.g.  <div style="color: white; background-color: black;">...</div>
 
 
 <HTML NOTES>
